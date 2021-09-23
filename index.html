@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de mejoramiento</title>
+    <style>
+        .body {
+            margin: 0;
+            box-sizing: border-box;
+            background: lightblue;
+        }
+
+        .header {
+            height: 15vh;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .titulo {
+            margin: 0;
+            text-align: center;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .boton {
+            cursor: pointer;
+            border-radius: 0;
+            background: lightgray;
+            border: none;
+            box-shadow: 1px 2px black;
+        }
+
+        .main {
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contenedor-texto {
+            background: red;
+            width: 70%;
+            height: 70%;
+            display: flex;
+        }
+
+        .contenedor-imagen {
+            width: 40%;
+            border: 1px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imagen {
+            width: 150px;
+            height: 100px;
+        }
+
+        .texto {
+            width: 60%;
+            border: 1px solid green;
+            text-align: justify;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer {
+            height: 10vh;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="titulo">MAQUILLAJE</h1>
+        <div class="contenedor">
+            <button class="boton" id="vogue" onclick="mostrarVogue()">
+                VOGUE
+            </button>
+            <button class="boton" id="atenea" onclick="mostrarAtenea()">
+                ATENEA
+            </button>
+            <button class="boton" id="skala" onclick="mostrarSkala()">
+                SKALA
+            </button>
+            <button class="boton" id="athos" onclick="mostrarAthos()">
+                ATHOS
+            </button>
+            <button class="boton" id="loreal" onclick="mostrarLoreal()">
+                LOREAL
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="contenedor-texto">
+            <div class="contenedor-imagen" id="contenedor-imagen">
+
+            </div>
+            <div class="texto" id="texto">
+
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Hecho por Valentina Lopez, grado 9°</p>
+    </footer>
+</body>
+<script>
+    x = 0;
+    function mostrarVogue() {
+        document.getElementById('contenedor-imagen').innerHTML = ''
+        document.getElementById('texto').innerHTML = ''
+        console.log(x)
+        if (c == 1 | z == 1 | v == 1 | b == 1) {
+            x = 0
+            c = 0
+            z = 0
+            v = 0
+            b = 0
+        }
+        if (x % 2 == 0) {
+
+            document.getElementById('contenedor-imagen').innerHTML = '<img src="vogue.png" alt="vogue" class="imagen">';
+            document.getElementById('texto').innerHTML = '<p class="parrafo">Vogue es una revista estadounidense de moda que nació en 1892. Su fundador fue Arthur Baldwin Turnure. Cuando falleció en 1909, la revista pasó a manos de la editorial Conde Nast Publications Inc. (creada en 1908, con sede principal en Nueva York). Fue la primera publicación estadounidense que logró conquistar Europa. En Gran Bretaña comenzó a publicarse en 1916 y en Francia en 1924. Hoy está considerada la revista de moda más influyente a nivel mundial y se edita en más de veinte países. Empezó como una publicación semanal, después quincenal, y en la actualidad tiene un carácter mensual. Desde 1988, su redactora jefe es Anna Wintour.</p>'
+            x = 0
+
+        }
+        x = x + 1;
+    };
+    c = 0;
+    function mostrarAtenea() {
+        document.getElementById('contenedor-imagen').innerHTML = ''
+        document.getElementById('texto').innerHTML = ''
+        if (x == 1 | z == 1 | v == 1 | b == 1) {
+            x = 0
+            c = 0
+            z = 0
+            v = 0
+            b = 0
+        }
+        if (c % 2 == 0) {
+
+            document.getElementById('contenedor-imagen').innerHTML = '<img src="atenea.png" alt="vogue" class="imagen">';
+            document.getElementById('texto').innerHTML = '<p class="parrafo">Atenea es una empresa dedicada a la comercialización de productos y accesorios de belleza.</p>'
+            c = 0
+        }
+        c = c + 1;
+    };
+    z = 0;
+    function mostrarSkala() {
+
+        document.getElementById('contenedor-imagen').innerHTML = ''
+        document.getElementById('texto').innerHTML = ''
+        if (c == 1 | x == 1 | v == 1 | b == 1) {
+            x = 0
+            c = 0
+            z = 0
+            v = 0
+            b = 0
+        }
+        if (z % 2 == 0) {
+
+            document.getElementById('contenedor-imagen').innerHTML = '<img src="skala.png" alt="vogue" class="imagen">';
+            document.getElementById('texto').innerHTML = '<p class="parrafo">La marca Skala fue creada hace mas de 32 años en la industria de los cosméticos y la belleza. Vino para cambiar la vida de miles de mujeres en Brasil y ahora esta en Colombia, trayendo una nueva forma de cuidar el cabello. La marca es pionera en cremas de 1000gr o 1kg y el "baño de crema". Desde entonces esto se ha convertido en un habito en la vida de las brasileras y se ha propagado por el mundo. En Colombia llega la marca Skala para que nuestras mujeres luzcan sus cabellos con seguridad.</p>'
+            z = 0
+        }
+        z = z + 1;
+    };
+    v = 0;
+    function mostrarAthos() {
+
+        document.getElementById('contenedor-imagen').innerHTML = ''
+        document.getElementById('texto').innerHTML = ''
+        if (c == 1 | z == 1 | x == 1 | b == 1) {
+            x = 0
+            c = 0
+            z = 0
+            v = 0
+            b = 0
+        }
+        if (v % 2 == 0) {
+            document.getElementById('contenedor-imagen').innerHTML = '<img src="athos.png" alt="vogue" class="imagen">';
+            document.getElementById('texto').innerHTML = '<p class="parrafo">Productos de belleza – Productos de cuidado personal | Es una compañía dedicada a la fabricación y comercialización de productos para el cuidado de la belleza, salud y hogar, de una manera oportuna y confiable.</p>'
+
+            v = 0
+        }
+        v = v + 1;
+    };
+    b = 0;
+    function mostrarLoreal() {
+        document.getElementById('contenedor-imagen').innerHTML = ''
+        document.getElementById('texto').innerHTML = ''
+        if (c == 1 | z == 1 | v == 1 | x == 1) {
+            x = 0
+            c = 0
+            z = 0
+            v = 0
+            b = 0
+        }
+
+        if (b % 2 == 0) {
+            document.getElementById('contenedor-imagen').innerHTML = '<img src="loreal.png" alt="vogue" class="imagen">';
+            document.getElementById('texto').innerHTML = '<p class="parrafo">LOréal es una empresa francesa de cosméticos y belleza, creada en 1909 por el químico Eugène Schueller. Con sede en Clichy, es la compañía de cosméticos más grande del mundo, y cuenta con una sede social en París. Desarrolla su actividad en el campo de la cosmética, concentrándose en el color del cabello, cuidado de la piel, protección solar, maquillaje, perfumes, cuidado del cabello y cuidados para hombres. Es una compañía pionera en investigación sobre dermatología, toxicología, ingeniería de tejidos, y biofarmacéuticas. Es la que más patentes de nanotecnología tiene en los Estados Unidos</p>'
+
+            b = 0
+        }
+        b = b + 1;
+    };
+
+</script>
+
+</html>
